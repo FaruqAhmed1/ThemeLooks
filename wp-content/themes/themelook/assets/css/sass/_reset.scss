@@ -1,0 +1,160 @@
+/* ************************
+   01.1: Reset
+   ********************* */
+* {
+    outline: none !important;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+    
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+    
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+    
+::selection {
+    text-shadow: none;
+    color: $tc;
+}
+
+::placeholder {
+    color: $scolor !important;
+    opacity: 1 !important;
+}
+    
+iframe {
+    max-width: 100%;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+}
+    
+button,
+button[type="submit"],
+input[type="submit"] {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+}
+    
+select {
+    width: 100%;
+    max-width: 100%;
+}
+ 
+textarea {
+    resize: none;
+}
+    
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+input,
+input:hover,
+input:focus,
+input:active,
+select,
+textarea {
+    text-decoration: none;
+    outline: none !important;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=search], input[type=number], textarea {
+    border-radius: 0;
+}
+    
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+p:last-child {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+h1 {
+    font-size: 48px;
+}
+   
+h2 {
+    font-size: 36px;
+}
+  
+h3 {
+    font-size: 28px;
+}
+  
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+pre {
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0.8em 1.6em;
+}
+html, body{
+    max-height: 100%;
+}
+body {
+    overflow-x: hidden !important;
+}

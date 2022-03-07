@@ -1,0 +1,272 @@
+/* ************************
+   03: Common CSS
+   ********************* */
+.about-content, .speaker-skills-carousel-content {
+    @include max991() {
+      margin-bottom: 50px;
+    }
+    h2 {
+      padding-left: 14px;
+      line-height: 42px;
+      @include max480() {
+        line-height: 34px;
+        font-size: 24px;
+      }
+      &:before {
+        @extend %title-stick;
+        height: 90%;
+        top: 5%;
+      }
+      span {
+        color: $tsc;
+      }
+    }
+    p {
+      margin-top: 40px;
+    }
+}
+.speaker-skills-carousel-content{
+    @include max480() {
+        margin-bottom: 0;
+    }
+}
+.home2{
+    .button{
+        border-color: $home2c1;
+        &:after{
+            @include bg-gradient($home2c1, $home2c2);
+        }
+    }
+    .button.blog-read-more-btn{
+        background: none;
+        color:$scolor;
+    }
+    .button.hero-btn{
+        color:$scolor;
+        &:after{
+            opacity: 0;
+        }
+        &:hover{
+            color:$wc;
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
+    .button.wbg.pricing-box-btn{
+        &:hover{
+            color:$home2c1;
+        }
+    }
+    .button.blog-read-more-btn{
+        @include transition(all .5s ease-in-out);
+        padding: 0;
+        border:none;
+        &:after{
+            display: none;
+        }
+    }
+}
+.home4{
+    .button.wbg{
+        border:1px solid $tsc;
+    }
+}
+.section-padding{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include medium() {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include tab(){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include mobile(){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include max480() {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+.section-title{
+    margin-bottom: 65px;
+    @include tab(){
+        margin-bottom: 60px;
+    }
+    @include mobile(){
+        margin-bottom: 50px;
+    }
+    @include max480() {
+        margin-bottom: 40px;
+    }
+
+    h2{
+        position: relative;
+        display: inline-block;
+        margin-bottom: 42px;
+        padding: 0 12px;
+        line-height: 1;
+        @include mobile() {
+            margin-bottom: 40px;
+        }
+        @include mobilesm() {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        span{
+            color:$tsc;
+        }
+        &:before, &:after{
+            @extend %title-stick;
+        }
+        &:after{
+            left: auto;
+            right: 0;
+        }
+    }
+}
+.home2{
+    .section-title{
+        h2{
+            span{
+                color:$home2c1;
+            }
+            &:before, &:after{
+                @extend %title-stick;
+                background-color: $home2c2;
+            }
+            &:after{
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}
+.gray-bg{
+    background-color: #f9f9f9;
+}
+.icon-bg{
+    width: 90%;
+    margin-left: 5%;
+    position: absolute;
+    z-index: 0;
+    bottom:10%;
+}
+
+p{
+    @include max480() {
+        font-size: 14px;
+    }
+}
+.first-item, .second-item{
+    @include max991() {
+        margin-bottom: 30px;
+    }
+}
+
+#countdown{
+    & > li{
+        @include flex(0, 0, 46%);
+        height: 150px;
+        border-radius: 10px;
+        background-color: $wc;
+    }
+    .single-countdown{
+        h2{
+            font-size: 60px;
+            font-family: $barlow;
+            font-weight: $bold;
+            color:$home2c1;
+            line-height: 40px;
+        }
+        h5{
+            font-size: 18px;
+            text-transform: capitalize;
+            font-weight: $medium;
+            margin-top:12px;
+            color:$home2c1;
+            font-family: $worksans;
+        }
+    }
+    & > li:nth-child(1), & > li:nth-child(2){
+        margin-bottom: 8%;
+    }
+}
+.svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.svg.hero-svg{
+    height:calc(100% + 3px);
+    bottom:-3px;
+    width: calc(100% + 1px);
+    left: -1px;
+    z-index: 1;
+}
+.svg.home2-hero-svg{
+    height:calc(100% + 1px);
+    bottom:-1px;
+    z-index: 1;
+}
+.svg.about-svg{
+    height:calc(100% + 2px);
+    top:-1px;
+    width: calc(100% + 2px);
+    left: -1px;
+    z-index: 1;
+}
+.svg.footer-svg{
+    height:calc(100% + 1px);
+    top:-1px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"],
+input[type="search"],
+textarea {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 8px 25px;
+  border: 1px solid $borderc;
+}
+
+.radio-field {
+    input[type="radio"] {
+      display: none;
+    }
+    div {
+      @include flex(0, 0, 120px);
+    }
+    input[type="radio"]:checked + label:before {
+      @include bg-gradient($tc, $tsc);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid $tsc;
+    }
+    label {
+      font-size: 16px;
+      position: relative;
+      padding-left: 25px;
+    }
+    label:before {
+      content: "";
+      height: 13px;
+      width: 13px;
+      border: 2px solid $tsc;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      top: 5px;
+      left: 0;
+    }
+  }

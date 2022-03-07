@@ -1,0 +1,122 @@
+// Transition
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -ms-transition: $property;
+    transition: $property;
+}
+//Transform
+@mixin transform($value){
+    transform: $value;
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+}
+
+//Flex-grow, Flex-shrink, Flex-basis
+@mixin flex($grow, $shrink, $basis){
+    -webkit-box-flex:$grow;
+       -ms-flex-positive:$grow;
+           flex-grow:$grow;
+
+    -ms-flex-negative:$shrink;
+        flex-shrink:$shrink;
+
+    -ms-flex-preferred-size:$basis;
+                flex-basis:$basis;
+}
+
+//Box Shadow
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow:$shadow;
+           box-shadow:$shadow;
+}
+
+//Gradient Bg
+@mixin bg-gradient($from, $to) {
+    background: $from;
+    background: -moz-linear-gradient(left, $from 0%, $to 100%);
+    background: -webkit-linear-gradient(left, $from 0%,$to 100%);
+    background: linear-gradient(to right, $from 0%,$to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$from}', endColorstr='#{$to}',GradientType=0);
+}
+
+//Gradient Color
+@mixin color-gradient($from, $to) {
+    color: $from;
+    color: -moz-linear-gradient(left, $from 0%, $to 100%);
+    color: -webkit-linear-gradient(left, $from 0%,$to 100%);
+    color: linear-gradient(to right, $from 0%,$to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$from}', endColorstr='#{$to}',GradientType=0);
+}
+
+// FontAwesome Icon 
+@mixin fa($icon) {
+    font-family: FontAwesome;
+    content: $icon;
+}
+@mixin transform($value) {
+    -webkit-transform:$value;
+    -ms-transform:$value;
+    transform:$value;
+    -moz-transform:$value;
+    -o-transform:$value;
+}
+ 
+
+// Responsive
+@mixin large() {
+    @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin medium() {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin max991() {
+    @media only screen and (max-width:991px) {
+        @content;
+    }
+}
+
+@mixin tab() {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin widemobile() {
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin max480() {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+} 
+
+@mixin mobilesm() {
+    @media only screen and (max-width: 380px) {
+        @content;
+    }
+}
+
+@mixin max576() {
+    @media only screen and (max-width:576px) {
+        @content;
+    }
+}
+     
+ 
